@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.js">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<style>
+ 
+</style>
+<body>
+  <section>
+    <div class="image">
+      <img src="./images/illustration-box-desktop.svg" alt="" class="box">
+    </div>
+      <div class="faq">
+        <h1>FAQ</h1>
+        <div id="Accordion_wrap">
+                <div class="que">
+                  <span>How many team members can I invite?</span>
+                </div>
+                <div class="anw">
+                  <span>No more than 2GB. All files in your account
+                  </span>
+                </div>
+                <div class="que">
+                  <span>What is the maximum file upload size?</span>
+                </div>
+                <div class="anw"><span>No more than 2GB. All files in your account
+                </span>
+              </div>
+                <div class="que">
+                  <span>How do I reset my password?</span>
+                </div>
+                <div class="anw"><span>No more than 2GB. All files in your account
+                </span>
+              </div>
+                <div class="que">
+                  <span>Can I cancel my subscription?</span>
+                </div>
+                <div class="anw"><span>No more than 2GB. All files in your account
+                </span>
+              </div>
+                <div class="que">
+                  <span>Do you provide additional support?</span>
+                </div>
+                <div class="anw"><span>No more than 2GB. All files in your account
+                </span>
+              </div>
+        </div>
+      </div>
+  </section>
+    <script>
+      $(".que").click(function() {
+   $(this).next(".anw").stop().slideToggle(300);
+  $(this).toggleClass('on').siblings().removeClass('on');
+  $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
+});
+    </script>
+</body>
+</html>
